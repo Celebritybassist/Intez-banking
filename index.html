@@ -107,7 +107,7 @@
           alert(`${form.userid.value} Logged In Successfully!`);
           User.login(form.userid.value, form.pwd.value);
           setTimeout(
-            window.location.href = "https://intez-banking.netlify.app/dashboard.html",
+            ()=>window.location.href = "https://intez-banking.netlify.app/dashboard.html",
             3000
           );
           return true;
