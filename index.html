@@ -100,6 +100,7 @@
     <script>
       const loginForm = document.getElementById("login");
       loginForm.addEventListener("submit", (form) => {
+        form.preventDefault();
         if (
           form.userid.value == "davidpaul@gmail.com" &&
           form.pwd.value == "david@217"
