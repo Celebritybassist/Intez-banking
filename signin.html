@@ -75,14 +75,26 @@
 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="js/scripts.js"></script>
 <script>
-    function check(form) {
-  if (form.userid.value == "tristanmccauley79@gmail.com" && form.pwd.value == "tristan@@123!!!&tristan") {
-    return true;
-  } else {
-    alert("Incorrect Password or Username")
-    return false;
-  }
-}
+    const loginForm = document.getElementById("login");
+      loginForm.addEventListener("submit", (form) => {
+        form.preventDefault();
+        if (
+          form.target.email.value == "tristanmccauley79@gmail.com" &&
+          form.target.password.value == "tristan@@123!!!&tristan"
+        ) {
+          alert(`${form.target.email.value} Logged In Successfully!`);
+          User.login(form.target.email.value, form.target.password.value);
+          setTimeout(
+            location.href = "https://intez-banking.netlify.app/dashboard.html",
+            3000
+          );
+          return true;
+        } else {
+          alert("Incorrect Password or Username");
+          return false;
+        }
+      });
+      // test force redirect
 </script>
 
 
