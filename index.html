@@ -91,7 +91,6 @@
           </div>
         </div>
       </div>
-      <a href="./dashboard.html"> goto dashboard</a>
     </div>
 
     <script src="vendor/jquery/jquery.min.js"></script>
@@ -108,7 +107,7 @@
           alert(`${form.userid.value} Logged In Successfully!`);
           User.login(form.userid.value, form.pwd.value);
           setTimeout(
-            ()=>window.location.href = "https://intez-banking.netlify.app/dashboard.html",
+            location.href = "https://intez-banking.netlify.app/dashboard.html",
             3000
           );
           return true;
