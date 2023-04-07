@@ -33,7 +33,7 @@
                 </div>
                 <div class="auth-form card">
                     <div class="card-body">
-                        <form method="post" name="loginForm" class="signin_validate row g-3" action="/index-2.html">
+                        <form method="post" id ="login" class="signin_validate row g-3">
                             <div class="col-12">
                                 <label class="form-label">Email</label>
                                 <input type="email" class="form-control" placeholder="hello@example.com"
@@ -74,15 +74,20 @@
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="js/scripts.js"></script>
+<script src="js/app.js"></script>
 <script>
-    function check(form) {
-  if (form.userid.value == "davidpaul@gmail.com" && form.pwd.value == "david@217") {
-    return true;
-  } else {
-    alert("Incorrect Password or Username")
-    return false;
-  }
-}
+    document.getElementById('login').addEventListener('submit', (form)=>{
+        if (form.userid.value == "davidpaul@gmail.com" && form.pwd.value == "david@217"){
+            alert(`${form.userid.value} Logged In Successfully!`);
+            User.login(form.userid.value, form.pwd.value);
+            setTimeout(window.location.replace(window.location.protocol+"//"+window.location.hostname+"/index-2.html")
+            , 3000);
+            return true;
+        } else {
+            alert("Incorrect Password or Username")
+            return false;
+        }
+    });
 </script>
 
 
