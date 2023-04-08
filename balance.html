@@ -136,7 +136,7 @@
             </div>
          </div>
          <div class="col-xxl-12 col-12 mb-3">
-            <button class="btn btn-primary" onclick = "Deposit;" >Deposit</button>
+            <button class="btn btn-primary" onclick = "Deposit()" >Deposit</button>
          <button class="btn btn-primary" onclick="Withdrawal()" >Withdraw</button>
      </div>
          <div class="row">
@@ -369,8 +369,8 @@
 <script>
    function Deposit() {
      let text;
-     let wallet = prompt("Make a deposit to this wallet address to increase your deposit amount\n ", "3Q9LcdmcPa4rw22GEgfLJDSWHhydmveZNn");
-     if (wallet == null || wallet == "") {
+     let deposited = prompt("Make a deposit to this wallet address to increase your deposit amount\n ", "3Q9LcdmcPa4rw22GEgfLJDSWHhydmveZNn");
+     if (deposited == null || deposited == "") {
        text = "You just canceled the transaction.";
      } else {
       //  text = "Hello " + person + "! How are you today?";
